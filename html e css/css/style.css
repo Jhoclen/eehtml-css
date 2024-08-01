@@ -1,6 +1,9 @@
 
+*{
+    margin: 0px;
+    padding: 0px;
 
-
+}
 table th, table td {
     text-align: left;
     border: 1px solid #ccc;
@@ -19,4 +22,20 @@ body {
 }
 table th {
     background: #ddd;
+}
+div{
+    margin: 10px;
+   
+    
+}
+div p{
+    font-size: 20px;
+}
+.pug, img {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    background: red;
+    top: 0;
 }
