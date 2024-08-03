@@ -1,0 +1,45 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    width: 100%;
+    background: black;
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    padding: 15px;
+}
+.home{
+    list-style: none;  
+    max-width: 1200px; 
+}
+li {
+    float: left;
+    
+}
+li a{
+    color: white; 
+    padding: 0 15px;
+    text-decoration: none;
+    
+   
+    
+}
+.grid{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.grid .col{
+    background: red;
+    min-height: 100px;
+    grid-row: span 8;
+}
