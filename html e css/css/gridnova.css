@@ -24,9 +24,7 @@ li {
 li a{
     color: white; 
     padding: 0 15px;
-    text-decoration: none;
-    
-   
+    text-decoration: none;  
     
 }
 .grid{
@@ -41,5 +39,14 @@ li a{
 .grid .col{
     background: red;
     min-height: 100px;
-    grid-row: span 8;
+    grid-row: span 9;
+}
+
+@media(max-width: 768px) {
+    .grid .col:nth-child(2){
+        grid-column: span 3;
+        background: yellow;
+
+        
+    }
 }
