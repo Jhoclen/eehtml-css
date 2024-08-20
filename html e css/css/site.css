@@ -21,8 +21,7 @@
     grid-template-rows: 100px 1fr 100px;
     grid-template-columns: 200px 1fr;
     grid-template-areas: 'head head' 'nav main' 'rodape rodape';
-    
-    
+       
 
  }
  .grid section:nth-child(1){
