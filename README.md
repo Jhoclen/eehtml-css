@@ -1,1 +1,1 @@
-repositorio destinado aos estudos de html/css 
+repositório destinado aos estudos de html/css 
