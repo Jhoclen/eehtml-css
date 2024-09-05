@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de multa</h1>
+    velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="varificar" id="btnvel" onclick="multa()" >
+    <div id="res"></div>
+
+    <script>
+      
+
+      function multa(){
+        var vel = window.document.getElementById('txtvel')  
+        var a = Number(vel.value)
+        var res = window.document.getElementById('res')
+        if (a > 60) {
+            res.innerHTML ='VOCE FOI MULTADO'   
+   
+        }else{
+            res.innerHTML ='ok'
+        }
+      }
+      
+    </script>
+</body>
+</html>
