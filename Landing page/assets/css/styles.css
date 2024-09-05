@@ -2,6 +2,7 @@
 
 :root{
     --gap: 3rem;
+    --light-gray-color: #EEEEEE;
 }
 
 *{
@@ -48,6 +49,67 @@ h5{
 h6{
     font-size: 3.5rem;
 }
+a {
+ text-decoration: none;           
+
+}
+/* criando a barra do nav-bar onde fica a logo e o nav de fato*/
+.menu{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--light-gray-color);
+    
+}
+.menu .main-content{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu-content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /*o motivo é pq  eu quero que o tamanho do a empurre o conteiner para baixo */
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+.menu h1{
+    font-size: 2.3rem; 
+}
+/* um conteiner flex dentro de outro usando o ul como conteiner para fazer a lista horizontal(séria fazer o li fica um do lado do outro ao inves de um embaixo do outro como padrão */
+.menu ul{
+    list-style: none;
+    display: flex;
+
+}
+/* para ajustar a ul apartir do meu a que é padrão inline  não empurra o conteiner para baixo por isso a mudança para display block*/
+.menu ul li a{
+   display: block;
+   padding: 2rem;
+   font-size: 1.8rem;
+   /*para o pseudo elemento after ser relativo ao a*/
+   position: relative;
+}
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    /*aqui está o pulo do gato para fazer a animação*/
+    width: 0;
+    height: 0.2rem;
+    background: crimson; 
+    transition: all 300ms ease-in-out;
+ }
+ .menu ul li a:hover:after{
+    width: 50%;
+    left: 25%;
+   
+ }
 .main-bg{
     background-image: url('../img/main-bg.svg');
     background-size: cover;
