@@ -12,10 +12,11 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
    
     
@@ -31,7 +32,10 @@ h1{
 }
 
 h2{
-    font-size: 5.5rem;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    
 }
 
 h3{
@@ -54,7 +58,8 @@ a {
 
 }
 p{
-  line-height: 1.6;  
+  line-height: 3rem; 
+  margin-bottom: 3rem; 
 }
 /* criando a barra do nav-bar onde fica a logo e o nav de fato*/
 .menu{
@@ -81,7 +86,7 @@ p{
     
 }
 .menu h1{
-    font-size: 2.3rem; 
+    font-size: 2.5rem; 
 }
 /* um conteiner flex dentro de outro usando o ul como conteiner para fazer a lista horizontal(séria fazer o li fica um do lado do outro ao inves de um embaixo do outro como padrão */
 .menu ul{
@@ -93,7 +98,7 @@ p{
 .menu ul li a{
    display: block;
    padding: 2rem;
-   font-size: 1.8rem;
+   font-size: 1.5rem;
    /*para o pseudo elemento after ser relativo ao a*/
    position: relative;
 }
@@ -114,9 +119,9 @@ p{
    
  }
 
- /*.menu-spacing{
+ .menu-spacing{
     height: 6.4rem
- }*/
+ }
 .main-bg{
     background-image: url('../img/main-bg.svg');
     background-size: cover;
@@ -134,6 +139,7 @@ p{
 }
 .section{
     min-height: 100vh;
+    
 }
 /*criação da grid para o conteudo (lembrado que a grid deve ser criada englobado o conteudo sempre em um conteiner maior onde abriga o conteudo)*/
 .intro-content{
@@ -153,18 +159,58 @@ p{
     pode ser feito essa auteração mas eu encontrei uma forma que julguei melhor*/
 }
 
-.intro-text h2{
-    font-size: 6rem;
-    margin-bottom: 5rem;
-    text-transform: uppercase;
-    
-}
 .intro-img img{
     max-width: 100%;
     height: auto;
     position: relative;
-    left: 10rem;
-    max-height: 65.0rem;
+    max-height: 40.0rem;
 }
 
+.top3-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+    max-width: 70rem;
+    text-align: center;
+    padding-top: 5rem;
 
+}
+.grid-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+
+}
+.grid-content h2{  
+    margin-bottom: 1rem; 
+    
+
+}
+.description{
+    padding-bottom: 6rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: gridzin;
+}
+.grid h3{
+    font-size: 2.5rem;
+    position: relative;
+    padding-left: 7rem;
+    padding-bottom: 3rem;
+}
+.grid h3::before{
+    counter-increment: gridzin;
+    content: counter(gridzin);
+    font-style: italic;
+    font-size: 7rem;
+    position:absolute;
+    bottom: 0rem;
+    left: 0rem;
+    transform : rotate(5deg);
+
+}
