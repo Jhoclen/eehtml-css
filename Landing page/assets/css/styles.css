@@ -53,15 +53,18 @@ a {
  text-decoration: none;           
 
 }
+p{
+  line-height: 1.6;  
+}
 /* criando a barra do nav-bar onde fica a logo e o nav de fato*/
 .menu{
-    background: white;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 1px solid var(--light-gray-color);
+    border-bottom: 0.1rem solid var(--light-gray-color);
+    z-index: 1;
     
 }
 .menu .main-content{
@@ -110,6 +113,10 @@ a {
     left: 25%;
    
  }
+
+ /*.menu-spacing{
+    height: 6.4rem
+ }*/
 .main-bg{
     background-image: url('../img/main-bg.svg');
     background-size: cover;
@@ -121,11 +128,43 @@ a {
 }
 
 .main-content{
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
 }
 .section{
     min-height: 100vh;
 }
+/*criação da grid para o conteudo (lembrado que a grid deve ser criada englobado o conteudo sempre em um conteiner maior onde abriga o conteudo)*/
+.intro-content{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr ;
+    gap: var(--gap);
+    height: 100vh;
+}
+/* aqui vc criou o flex dentro da grid para organizar o conteudo ( flex-flow: o primeiro comando para decidir o Main Axis , o wrap é basicamente um comando pra quebrar linha quando for necessario*/
+.intro-text, .intro-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    /*ajustando por conta da div que foi criada para da um espaço do menu(isso pq o 64rem de espaço que foi dado não deixa alinha o conteudo ao centro com o comando padrão do flex então foi feito essa alteração para alinha o conteudo )*/
+    /*position: relative;
+     top: -5rem;
+    pode ser feito essa auteração mas eu encontrei uma forma que julguei melhor*/
+}
+
+.intro-text h2{
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    
+}
+.intro-img img{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: 10rem;
+    max-height: 65.0rem;
+}
+
 
