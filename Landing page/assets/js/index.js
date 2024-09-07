@@ -1,6 +1,6 @@
 
 
-var pais
+var pais ='brasil'
 
 if(pais.toLowerCase() == 'brasil'){
     console.log(' voce é br hue hue')

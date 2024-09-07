@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>verificação aeroporto</h1>
+    qual seu pais de origem: <input type="text" id="paistxt">
+    <input type="button" id="btntxt" value="verificar" onclick="br()">
+    <div id="res"></div>
+
+    <script>
+        var pais = window.document.getElementById('paistxt')
+        
+        var res = window.document.getElementById('res')
+
+        function br(){
+            if(pais.value == 'brasil'){
+                res.innerHTML = '<h1> voce é BR hue hue</h1>'
+            }else{
+                res.innerHTML = '<h1> voce é gringo</h1>'
+            }
+
+        }
+    </script>
+</body>
+</html>
