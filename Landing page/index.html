@@ -18,7 +18,7 @@
                     <li><a href="#intro">intro</a></li>
                     <li><a href="#top3">top3</a></li>
                     <li><a href="#Jogabilidade">Jogabilidade</a></li>
-                    <li><a href="#">gallery</a></li>
+                    <li><a href="#gallery">gallery</a></li>
                     <li><a href="#">work</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
@@ -51,25 +51,24 @@
          
     </section>
    
-    <div class="menu-spacing" id="Jogabilidade"></div>
 
-    <section class="main-bg section grid-one" >
+    <section class="main-bg section grid-one " id="Jogabilidade" >
         <div class="main-content grid-content">
             <h2>Jogabilidade</h2>
             <p class="description">Link ganha novas habilidades coletando itens e armas</p>
             <div class="grid">
-                <article>
+                <div>
                     <h3>Majora's Mask</h3>
                     <p>The Legend of Zelda: Ocarina of Time é um jogo de ação e aventura e fantasia ambientado em um cenário expansivo. O jogador controla o protagonista da série, Link, a partir de uma perspectiva em terceira pessoa, num mundo tridimensional. Link luta principalmente com uma espada e um escudo, mas também pode usar outras armas,  </p>
-                  </article>
-                  <article>
+                  </div>
+                  <div>
                     <h3>Hyrule Field</h3>
                     <p> Link fique focado e se agarre a inimigos ou outros objetos. Ao usar esta técnica, a câmera segue o alvo e Link constantemente o encara. Ataques de projéteis são direcionados automaticamente ao alvo e não requerem mira manual. </p>
-                  </article>
-                  <article>
+                  </div>
+                  <div>
                     <h3>Forest Temple.</h3>
                     <p>link recebe uma ocarina perto do início do jogo, que mais tarde é substituída pela Ocarina do Tempo. Ao longo do jogo, Link aprende doze melodias que lhe permitem resolver quebra-cabeças baseados em música </p>
-                  </article>
+                  </div>
     
             </div>
 
@@ -77,13 +76,69 @@
 
     </section>
 
-    <section class="white-bg section">
-        <h1>jhoclen codando ainda</h1>
+    <section class="white-bg section grid-one " id="gallery" >
+        <div class="main-content grid-content">
+            <h2>gallery</h2>
+            <p class="description">Link ganha novas habilidades coletando itens e armas</p>
+            <div class="grid">
+                 <div class="gallery-img">
+                   <img src="" alt="" id="animeImage1">
+                  </div>
 
+                  <div class="gallery-img">
+                    <img src="" alt="" id="animeImage2">
+                  </div>
+
+                  <div class="gallery-img">
+                    <img src="" alt="" id="animeImage3">
+                  </div >
+
+                  <div class="gallery-img">
+                    <img src="" alt="" id="animeImage4">
+                   </div >
+
+                   <div class="gallery-img">
+                     <img src="" alt="" id="animeImage5">
+                   </div>
+
+                   <div class="gallery-img">
+                     <img src="" alt="" id="animeImage6">
+                   </div>
+     
+    
+            </div>
+
+        </div>
 
     </section>
     
+   
+    
     <script>
+          // Função que retorna a URL de uma imagem aleatória
+          function getRandomAnimeImageURL() {
+            return fetch('https://api.waifu.pics/sfw/waifu')
+                .then(response => response.json())
+                .then(data => data.url)
+                .catch(error => console.log(error));
+        }
+
+        // Função para carregar a imagem em uma tag <img> com base no id fornecido
+        function loadImage(imgId) {
+            getRandomAnimeImageURL().then(url => {
+                const imgElement = document.getElementById(imgId);
+                imgElement.src = url;
+            });
+        }
+
+        // Carregando imagens para cada tag <img>
+        loadImage('animeImage1');
+        loadImage('animeImage2');
+        loadImage('animeImage3');
+        loadImage('animeImage4');
+        loadImage('animeImage5');
+        loadImage('animeImage6');
+                
         //var nome = window.prompt('qual o seu nome ?')
         //window.alert('seu nome é ' + nome)
     </script>
