@@ -233,5 +233,13 @@ p{
     transform: translate(-3%,3%) scale(1.2) rotate(5deg);
 
 }
+.work-content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 70rem;
+    min-height: 100vh;
+}
 
 
